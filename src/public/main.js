@@ -33,14 +33,14 @@ form.addEventListener("submit", async (event) => {
 });
 
 
-function renderGallery(images) {
-  gallery.innerHTML = images
-    .map(
-      ({ webformatURL, tags }) =>
-        `<div class="image-card">
-          <img src="${webformatURL}" alt="${tags}" />
-        </div>`
-    )
-    .join("");
-}
+// function renderGallery(images) {
+//   gallery.innerHTML = images
+//     .map(
+//       ({ webformatURL, tags }) =>
+//         `<div class="image-card">
+//           <img src="${webformatURL}" alt="${tags}" />
+//         </div>`
+//     )
+//     .join("");
+// }
 
