@@ -33,5 +33,5 @@ export function renderGallery(images) {
 }
 
 export function clearGallery() {
-  gallery.innerHTML = "";
+  gallery.innerHTML = " ";
 }
