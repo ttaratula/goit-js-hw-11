@@ -2,7 +2,7 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const gallery = document.getElementById("gallery");
-let lightbox;
+
 
 export function renderGallery(images) {
   const markup = images
@@ -13,25 +13,26 @@ export function renderGallery(images) {
             <img src="${webformatURL}" alt="${tags}" loading="lazy">
           </a>
           <div class="info">
-            <p>👍 Likes: ${likes}</p>
-            <p>👁 Views: ${views}</p>
-            <p>💬 Comments: ${comments}</p>
-            <p>⬇ Downloads: ${downloads}</p>
+            <p> Likes: ${likes}</p>
+            <p> Views: ${views}</p>
+            <p> Comments: ${comments}</p>
+            <p> Downloads: ${downloads}</p>
           </div>
         </li>
       `
     )
     .join("");
 
-  gallery.insertAdjacentHTML("beforeend", markup);
+  gallery.innerHTML = markup; // Перезаписуємо вміст галереї
 
   if (!lightbox) {
     lightbox = new SimpleLightbox(".gallery a");
   } else {
-    lightbox.refresh();
+    lightbox.refresh(); // Оновлюємо lightbox
   }
 }
 
+
 export function clearGallery() {
-  gallery.innerHTML = " ";
+  gallery.innerHTML = "";
 }
