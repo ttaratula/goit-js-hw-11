@@ -11,10 +11,25 @@ export function renderImages(images){
           <img src="${webformatURL}" alt="${tags}" class="gallery-image" />
         </a>
         <div class="info">
-          <p>${likes}</p>
-          <p>${views}</p>
-          <p>${comments}</p>
-          <p>${downloads}</p>
+        <ul class="baner">
+          <li class="baner-li">
+            <p class="baner-title">Likes</p>
+            <p class="baner-text">${likes}</p>
+          </li>
+          <li class="baner-li">
+            <p class="baner-title">Views</p>
+            <p class="baner-text">${views}</p>
+          </li>
+          <li class="baner-li">
+            <p class="baner-title">Comments</p>
+            <p class="baner-text">${comments}</p>
+          </li>
+          <li class="baner-li">
+            <p class="baner-title">Downloads</p>
+            <p class="baner-text">${downloads}</p>
+          
+            </li>
+        </ul>
         </div>
       </li>`
     )
