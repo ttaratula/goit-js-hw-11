@@ -1,4 +1,4 @@
-mport { renderImages } from "./js/render-functions";
+import { renderImages } from "./js/render-functions";
 import { fetchImages } from "./js/pixabay-api";
 
 import iziToast from "izitoast";
