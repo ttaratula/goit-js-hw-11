@@ -2,9 +2,20 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector(`.gallery`);
-export function renderImages(images){
-    gallery.innerHTML = images
-    .map(
+let lightbox = new SimpleLightbox('.gallery a', {
+  captions: true, // Увімкнення підписів
+  captionsData: 'alt', // Брати підпис з атрибуту alt
+  captionDelay: 250,
+});
+
+export function clearGallery() {
+  gallery.innerHTML = ''; // Очищаємо контейнер перед рендерингом
+}
+
+export function renderImages(images) {
+  clearGallery(); // Очищаємо перед додаванням нових картинок
+
+  const markup = images.map(
       ({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
       <li class="gallery-item">
         <a href="${largeImageURL}" class="gallery-link">
@@ -35,6 +46,6 @@ export function renderImages(images){
     )
     .join('');
 
-  const lightbox = new SimpleLightbox('.gallery a');
-  lightbox.refresh();
+    gallery.innerHTML = markup;
+    lightbox.refresh(); // Оновлюємо Lightbox після додавання нових зображень
 }
