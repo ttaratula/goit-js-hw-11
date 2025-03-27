@@ -41,16 +41,16 @@ h1,
   
   input {font-family: inherit;}
 
-  /*====================local changes====================*/
+/*====================local changes====================*/
   
-  .body {
+.body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
 .container {
-  width: 1128px;
+  width: 1135px;
   margin: auto;
   display: flex;
   gap: 8px;
@@ -117,23 +117,25 @@ button:hover {
 
 .li-gallery {
   width: calc((100%-48)/3);
-  border: 1px solid #808080;
+  /* border: 1px solid #808080;
   width: 360px;
-  height: 200px;
+  height: 200px; */
 }
 
 
-.img {
+/* .img {
   overflow: hidden;
   object-fit: cover;
   width: 360px;
   height: 152px;
-}  
+}   */
 
 .gallery-image {
   width: 360px;
   height: 152px;
   object-fit: cover;
+  object-position: center; 
+  overflow: hidden;
 
 } 
 
